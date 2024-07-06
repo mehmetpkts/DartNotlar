@@ -1,31 +1,27 @@
-main(){
-  
-  List<int> sayilar = [2,50,74,81,93,62,59,83,45,444];
+void main() {
+  List<int> sayilar = [2, 50, 74, 81, 93, 62, 59, 83, 45, 444];
 
+  // forEach ile doğrudan işlevi kullanma:
   sayilar.forEach((eleman) {
-  if(eleman.isOdd){
-    print("$eleman sayısı bir tek sayıdır.");
-  }
-  else{
-    print("$eleman sayısı bir çift sayıdır.");
-  }
+    if (eleman.isOdd) {
+      print("$eleman sayısı bir tek sayıdır.");
+    } else {
+      print("$eleman sayısı bir çift sayıdır.");
+    }
   });
 
-   // ya da şu şekilde yapılır:
+  // Fonksiyonu tanımlayıp forEach içinde kullanma:
+  List<int> sayilarr = [2, 50, 74, 81, 93, 62, 59, 83, 45, 4444];
 
-  List<int> sayilarr = [2,50,74,81,93,62,59,83,45,4444];
-
-  Function fonksiyon = (elemann){
-    if(elemann.isOdd){
+  // Fonksiyonun tipini 'void Function(int)' olarak belirtiyoruz çünkü Funciton olarak belirttiğimizde foreach için kullanamıyoruz.
+  void fonksiyon(int elemann) {
+    if (elemann.isOdd) {
       print("$elemann sayısı bir tek sayıdır.");
-    }
-    else{
+    } else {
       print("$elemann sayısı bir çift sayıdır.");
     }
-   };
+  }
 
+  // forEach içinde bu fonksiyonu kullanıyoruz.
   sayilarr.forEach(fonksiyon);
-
-
-
 }
