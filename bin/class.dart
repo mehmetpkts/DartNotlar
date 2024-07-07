@@ -1,5 +1,3 @@
-import 'class_benzeri_kullanilacak_komutlar.dart';
-
 main(){
   // belkide dart eğitiminin en önemli kısmı diyebiliriz.
 
