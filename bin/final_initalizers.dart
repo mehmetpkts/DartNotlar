@@ -1,7 +1,11 @@
 main(){
             // Final initalizer
 
+  Nokta nokta = Nokta();
 
+  Nokta1 nokta1 = Nokta1(5, 10);
+
+  Nokta2 nokta2 = Nokta2(10, 15);
 
 }
 
